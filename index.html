@@ -91,7 +91,21 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0e0PkeX0D4s36+0Lbhj69dX5IAYXGHfbmD7R1Tq2jwRxP6L6" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="./tiempo.js"></script>
+        <script>
+            // Función para actualizar el valor del rango en tiempo real
+function actualizarValor(valor) {
+    document.getElementById('valor-tiempo').textContent = `Tiempo seleccionado: ${valor} h`;
+}
+
+
+// Función para manejar el clic en el botón
+function generarSimulacion() {
+    const tiempo = document.getElementById('customRange3').value;
+    localStorage.setItem("horaSimulacion", tiempo);
+    window.location.href = "interface.html"; // Redirige a la página interface.html
+}
+
+        </script>
 
     </body>
 </html>
